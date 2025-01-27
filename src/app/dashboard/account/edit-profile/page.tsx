@@ -7,6 +7,9 @@ import ControlButton from '@/components/specific/ControlButton'
 import RootLayout from '@/app/layout'
 import Link from 'next/link'
 import { GoArrowLeft } from "react-icons/go";
+import Navigator from '@/components/specific/Navigator'
+
+
 function page() {
 
 const data = [
@@ -89,6 +92,8 @@ const data = [
                 </div>
                 <ControlButton buttonName='Save Changes' />
             </form>
+
+            <Navigator/>
         </div>
     </RootLayout>
   )

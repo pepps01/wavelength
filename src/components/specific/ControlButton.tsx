@@ -1,26 +1,26 @@
 import React from 'react'
 
 type ControlButtonProps = {
+    type:'submit'| 'button' | 'reset';
     title?: string;
-    buttonName: string;
+    buttonName?: string;
     buttonImage?: string;
     buttonLink?: any;
+    text?:string;
 }
 
 const ControlButton = (
     {
+       type,
+       text,
         title,
-        buttonName,
-        buttonImage,
-        buttonLink
     }
     :ControlButtonProps)=> {
         
   return (
-    <div className='w-100 border flex flex-row justify-center align-middle gap-4 py-3 px-3  rounded-full mt-4 bg-purple-800 hover:opacity-5 hover:cursor-pointer'>
-            <div>{buttonImage}</div>
-            <div className='text-white text-xl'>{buttonName}</div>
-    </div>
+    <button type={type} className="submit-button w-[100%] border flex flex-row justify-center align-middle gap-4 py-4 px-3  rounded-full mt-4 bg-purple-800 hover:opacity-5 hover:cursor-pointer text-white">
+      {text}
+    </button>
   )
 }
 

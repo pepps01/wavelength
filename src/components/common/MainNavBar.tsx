@@ -5,6 +5,7 @@ import React from 'react'
 function MainNavBar() {
   return (
     <div className='flex flex-row justify-between align-middle py-6 w-full max-w-[1256px] mx-auto'>
+      <Link href="/">
              <Image
                 className="dark:invert"
                 src="/Logo.png"
@@ -12,7 +13,8 @@ function MainNavBar() {
                 width={180}
                 height={38}
                 priority
-            />
+                />
+        </Link>
         <div className='flex flex-row gap-8 align-bottom justify-center'>
             <Link href={"/contact"} className='text-purple-700 text-lg pt-4'>Contact us</Link>
             <Link href={"/faq"} className='text-purple-700 text-lg pt-4'>FAQ</Link>
